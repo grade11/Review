@@ -11,7 +11,7 @@ import java.util.Scanner;
  *
  * @author Walter
  */
-public class Problem6 {
+public class Problem7 {
 
     /**
      * @param args the command line arguments
@@ -21,21 +21,24 @@ public class Problem6 {
         
         Scanner input = new Scanner(System.in);
         
-        System.out.println("Enter a number between 50 and 100: ");
-        int total =100;
-        int number = input.nextInt();
+        double pop = 6;
+        double startpop = 0;
+        double newpop =0;
+        int count = 1999;
         
-        System.out.println(total);
-        while(number < total)
+        while(pop < 10)
         {
-            total-=5;
-            if (total < number)
+            newpop = pop * 0.014;
+            pop += newpop;
+            
+            count+=1;
+            if(pop > 10)
             {
-                
-                break;
-            }
-            System.out.println(total);
+                System.out.println("Populations will be at 10 billion " + count + " years to reach 10 billion");
+            } 
+           
         }
+        
         
     }
     

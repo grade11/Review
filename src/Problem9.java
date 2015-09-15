@@ -11,7 +11,7 @@ import java.util.Scanner;
  *
  * @author Walter
  */
-public class Problem6 {
+public class Problem9 {
 
     /**
      * @param args the command line arguments
@@ -21,21 +21,22 @@ public class Problem6 {
         
         Scanner input = new Scanner(System.in);
         
-        System.out.println("Enter a number between 50 and 100: ");
-        int total =100;
-        int number = input.nextInt();
-        
-        System.out.println(total);
-        while(number < total)
+        String[] words = new String[10];
+        int totalLength = 0;
+        for (int i = 0; i < 10; i++) 
         {
-            total-=5;
-            if (total < number)
-            {
-                
-                break;
-            }
-            System.out.println(total);
+            System.out.println("please enter in a word: ");
+            words[i]= input.nextLine();
+            
+            totalLength += words[i].length();
+            
+            
+            
+            
+            
         }
+        
+        System.out.println("Avg Length is " +totalLength/10);
         
     }
     
